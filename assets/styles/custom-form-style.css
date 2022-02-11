@@ -1,0 +1,13 @@
+.text-field {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 4px;
+  color: white;
+  border-radius: 0px;
+  border-bottom: 1px solid #afadad;
+}
+
+.label {
+  color: #e0c883;
+}

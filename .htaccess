@@ -1,0 +1,25 @@
+DirectoryIndex index.php
+
+# enable apache rewrite engine
+RewriteEngine on
+
+# set your rewrite base
+# Edit this in your init method too if you script lives in a subfolder (Refer to readme)
+RewriteBase /rwsas
+
+# Deliver the folder or file directly if it exists on the server
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ 
+# Push every request to given route
+RewriteRule ^route route.php
+RewriteRule ^dashboard index-web.php
+RewriteRule ^app index-mobile.php
+#RewriteRule ^ index-mobile.php
+
+# Disable directory browsing 
+Options -Indexes
+
+# Hide the contents of directories
+IndexIgnore *
+
